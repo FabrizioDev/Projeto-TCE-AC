@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Envio de Arquivos | TCE-AC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Disponibilização de Arquivo Modelo e Verificação de de Participação</h1>
+    <h2>Coleta de Arquivos Excel</h2>
+  </header>
+
+  <div class="layout-side-by-side">
+    <section class="form-section">
+      <p>
+        Baixe o modelo de planilha, preencha com os dados solicitados e envie o arquivo preenchido usando o formulário abaixo.
+      </p>
+      <a href="arquivo/Base - Instituição.xlsm" class="download-btn" download>
+        📥 Baixar Modelo Excel
+      </a>
+
+      <form action="https://formsubmit.co/fabrizio.g.almanza@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="Novo envio de arquivo Excel">
+        <input type="hidden" name="_captcha" value="false">
+
+        <label for="instituicao">Nome da instituição:</label>
+        <input type="text" name="instituicao" id="instituicao" required>
+
+        <label for="arquivo">Arquivo preenchido:</label>
+        <input type="file" name="arquivo" id="arquivo" required>
+
+        <button type="submit">📤 Enviar Arquivo</button>
+      </form>
+    </section>
+    <aside class="qr-container">
+      <h3>Reunião 2 | 14/07/2025</h3>
+      <img src="arquivo/QRCode para Formulario de_Participação.png" alt="QR Code para Formulário" />
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Por um Futuro Melhor no Estado do Acre</p>
+  </footer>
+</body>
+</html>

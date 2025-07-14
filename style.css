@@ -1,0 +1,191 @@
+:root {
+  --verde-tce: #006633;
+  --amarelo-tce: #FFD700;
+  --cinza-claro: #f2f2f2;
+  --branco: #ffffff;
+  --preto: #333333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: var(--cinza-claro);
+  color: var(--preto);
+}
+
+header {
+  background-color: var(--verde-tce);
+  color: var(--branco);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: var(--branco);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--amarelo-tce);
+  color: var(--preto);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.download-btn:hover {
+  background-color: #e6c200;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--verde-tce);
+  color: var(--branco);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #004d26;
+}
+
+.qr-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: var(--branco);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+
+  /* Flex para alinhar conteúdo verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+}
+
+/* Unifique o estilo de section e aside */
+.form-section,
+.qr-container {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: var(--branco);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Ajuste para imagem do QR Code */
+.qr-container img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  object-fit: contain;
+  display: block;
+}
+
+.layout-side-by-side {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  min-height: 400px;
+  padding: 0 40px; /* Espaçamento lateral */
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--verde-tce);
+  color: var(--branco);
+  margin-top: 40px;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 900px) {
+  .layout-side-by-side {
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 1.5rem;
+  }
+
+  .form-section,
+  .qr-container {
+    max-width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 18px;
+  }
+  header h2 {
+    font-size: 15px;
+  }
+  .download-btn,
+  button,
+  input {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .qr-container img {
+    max-width: 90vw;
+    max-height: 200px;
+  }
+  footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
